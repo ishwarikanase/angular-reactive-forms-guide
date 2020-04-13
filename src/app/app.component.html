@@ -1,0 +1,22 @@
+<div>
+	<form [formGroup]="myForm" (submit)="onSubmit()">
+		<div>
+			<input class="form-group" formControlName="name" placeholder="Your name">
+  </div>
+			<div>
+				<input class="form-group" formControlName="email" placeholder="Your email">
+  </div>
+				<div>
+					<input class="form-group" formControlName="message" placeholder="Your message">
+</div>
+					<div>
+						<button [disabled]="myForm.invalid" class="btn btn-primary" type="submit">Send</button>
+					</div>
+
+
+	</form>
+</div>
+
+<pre>
+  {{myForm | json}}
+</pre>
